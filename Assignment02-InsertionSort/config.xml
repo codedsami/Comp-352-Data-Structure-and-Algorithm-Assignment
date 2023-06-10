@@ -1,0 +1,28 @@
+<config>
+	<test driver="ca.concordia.a2.StrInSort" method="main" label="Check Student Input Data">
+		<args>inputs1.txt</args>
+
+		<mark grade="10">
+			<check label="Check output original array"><regex>50 45 25 36 43 9 54 26 95 69 84 20 34 93 10</regex></check>
+		</mark>
+		<mark grade="10">
+			<check label="Check properly counted runs"><regex>We counted 4 INC runs of length 2</regex></check>
+		</mark>
+		<mark grade="10">
+			<check label="Check properly counted structuring compares"><regex>We performed 14 compares during structuring</regex></check>
+		</mark>
+		<mark grade="10">
+			<check label="Check properly counted overall compares"><regex>We performed 81 compares overall</regex></check>
+		</mark>
+		<mark grade="20">
+			<check label="Check properly counted swaps"><regex>We performed 58 swaps overall</regex></check>
+		</mark>
+		<mark grade="10">
+			<check label="Check properly counted reversals"><regex>We performed 1 reversal of runs in DEC order</regex></check>
+		</mark>
+		<mark grade="30">
+			<check label="Check output sorted array"><regex>95 93 84 69 54 50 45 43 36 34 26 25 20 10 9</regex></check>
+		</mark>
+	</test>
+
+</config>
