@@ -1,0 +1,26 @@
+<config>
+    <test driver="main.stuff.Driver" method="main" label="Test Hash Finding 100">
+        <args>ca.concordia.a4.SpeedyHashing dataE6.txt test100.txt</args>
+        <mark grade="100">
+            <check label="100 HashFinds">
+                <regex>Could not find count: ([0-9]*)</regex>
+                <eval step="1" stepval="4" maxstep="25">96</eval>
+            </check>
+        </mark>
+    </test>
+    <test driver="main.stuff.CompTime" method="main" label="Test Hash Quality">
+        <args>main.stuff.TotallyReliableHASH ca.concordia.a4.SpeedyHashing dataE6.txt</args>
+        <mark grade="50">
+            <check label="HashSpeed">
+                <regex>HashSpeed: ([0-9\.]*)</regex>
+                <eval step="10" stepval="0.1" maxstep="10">90</eval>
+            </check>
+        </mark>
+        <mark grade="50">
+            <check label="HashSize">
+                <regex>HashSize: ([0-9\.]*)</regex>
+                <eval step="10" stepval="0.1" maxstep="10">100</eval>
+            </check>
+        </mark>
+    </test>
+</config>
